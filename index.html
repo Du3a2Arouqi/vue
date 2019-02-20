@@ -1,0 +1,49 @@
+﻿<!Doctype html>
+<html>
+
+    <head>
+	    <title>vue</title>
+	    <meta charset="utf-8">
+	    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+	     crossorigin="anonymous">
+	    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+	    <meta name="viewport"  content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+	    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+
+    </head>
+
+    <body>
+        <div id="app">
+            <h1>{{message}}</h1>
+            <input v-model="message" type="text"/>
+        </div>
+        <div id="app1">
+            <span v-if="conditional==0">The conditional v-if{{conditional}}</span>
+            <span v-else-if="conditional==1">The conditional v-else-if{{conditional}}</span>
+        
+            <span v-else>The conditional v-else{{conditional}}</span>        </div>
+	
+
+
+	    <script src="assets/js/vue.js"></script>
+        <script>
+            new Vue({
+                el: "#app",
+                data: {
+                    message: "Hello World !",
+                }
+            });
+            var app1 = new Vue({
+                el: "#app1",
+                data: {
+                    conditional: 2
+                }
+
+                });
+
+           
+        </script>
+    </body>
+
+</html>
